@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Programação em C - Estrutura</title>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body>
+        <div class="container">
+            <header class="estrutura-header">
+                <h1>Estrutura de um Programa em C</h1>
+                <p>Entenda como os programas em C são organizados.</p>
+            </header>
+            <nav class="navbar">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="estrutura.html" class="nav-link active">Estrutura</a>
+                <a href="variaveis.html" class="nav-link">Variáveis</a>
+                <a href="entradasaida.html" class="nav-link">Entrada/Saída</a>
+                <a href="condicionais.html" class="nav-link">Condicionais</a>
+                <a href="lop.html" class="nav-link">Laços</a>
+            </nav>
+
+            <section>
+                <h2>Um programa C básico usa a função <code>main()</code> como ponto de entrada</h2>
+                <p>O código abaixo exibe uma mensagem no console:</p>
+                <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    printf("Olá, C!\n");
+    return 0;
+}</code></pre>
+                <p>Explicação:</p>
+                <ul>
+                    <li><code>#include &lt;stdio.h&gt;</code> traz a biblioteca padrão de entrada e saída.</li>
+                    <li><code>int main(void)</code> declara a função principal.</li>
+                    <li><code>printf</code> imprime texto na tela.</li>
+                    <li><code>return 0;</code> indica que o programa terminou com sucesso.</li>
+                </ul>
+            </section>
+
+            <div class="note">
+                <strong>Dica:</strong> Todo programa em C deve ter uma função <code>main()</code> que é executada quando o programa inicia.
+            </div>
+        </div>
+    </body>
+</html>

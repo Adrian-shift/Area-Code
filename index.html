@@ -3,94 +3,34 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Programação em C - Básico</title>
+        <title>Programação em C - Introdução</title>
         <link rel="stylesheet" href="estilo.css">
     </head>
     <body>
         <div class="container">
             <header class="index-header">
                 <h1>Programação em C - Introdução</h1>
-                <p>Uma página simples para aprender os conceitos básicos da linguagem C.</p>
+                <p>Aprenda os conceitos fundamentais da linguagem C de forma organizada.</p>
             </header>
             <nav class="navbar">
                 <a href="index.html" class="nav-link active">Início</a>
+                <a href="estrutura.html" class="nav-link">Estrutura</a>
+                <a href="variaveis.html" class="nav-link">Variáveis</a>
+                <a href="entradasaida.html" class="nav-link">Entrada/Saída</a>
+                <a href="condicionais.html" class="nav-link">Condicionais</a>
                 <a href="lop.html" class="nav-link">Laços</a>
             </nav>
 
             <section>
-                <h2>1. Estrutura de um programa em C</h2>
-                <p>Um programa C básico usa a função <code>main()</code> como ponto de entrada. O código abaixo exibe uma mensagem no console:</p>
-                <pre><code>#include &lt;stdio.h&gt;
-
-int main(void) {
-    printf("Olá, C!\n");
-    return 0;
-}</code></pre>
-                <p>Explicação:</p>
+                <h2>Bem-vindo ao tutorial de C</h2>
+                <p>Este material foi organizado em tópicos dedicados para facilitar seu aprendizado. Clique nos links da navegação acima para explorar cada tema:</p>
                 <ul>
-                    <li><code>#include &lt;stdio.h&gt;</code> traz a biblioteca padrão de entrada e saída.</li>
-                    <li><code>int main(void)</code> declara a função principal.</li>
-                    <li><code>printf</code> imprime texto na tela.</li>
-                    <li><code>return 0;</code> indica que o programa terminou com sucesso.</li>
+                    <li><strong><a href="estrutura.html">Estrutura</a></strong> - Entenda como os programas em C são organizados</li>
+                    <li><strong><a href="variaveis.html">Variáveis</a></strong> - Conheça os tipos de dados e como armazenar informações</li>
+                    <li><strong><a href="entradasaida.html">Entrada e Saída</a></strong> - Aprenda a interagir com o usuário</li>
+                    <li><strong><a href="condicionais.html">Condicionais</a></strong> - Controle o fluxo de seus programas</li>
+                    <li><strong><a href="lop.html">Laços</a></strong> - Domine as estruturas de repetição</li>
                 </ul>
-            </section>
-
-            <section>
-                <h2>2. Variáveis e tipos básicos</h2>
-                <p>As variáveis armazenam valores. Os tipos mais comuns são:</p>
-                <ul>
-                    <li><code>int</code> - números inteiros</li>
-                    <li><code>float</code> - números de ponto flutuante</li>
-                    <li><code>double</code> - números de ponto flutuante mais precisos</li>
-                    <li><code>char</code> - um único caractere</li>
-                </ul>
-                <pre><code>int idade = 20;
-float altura = 1.75f;
-double peso = 68.5;
-char letra = 'A';</code></pre>
-            </section>
-
-            <section>
-                <h2>3. Entrada e saída</h2>
-                <p>Use <code>printf</code> para mostrar dados e <code>scanf</code> para ler dados do usuário:</p>
-                <pre><code>#include &lt;stdio.h&gt;
-
-int main(void) {
-    int numero;
-    printf("Digite um número: ");
-    scanf("%d", &numero);
-    printf("Você digitou: %d\n", numero);
-    return 0;
-}</code></pre>
-                <p>Observação: <code>scanf</code> usa &amp; antes da variável para passar o endereço.</p>
-            </section>
-
-            <section>
-                <h2>4. Condicionais</h2>
-                <p>O <code>if</code> permite tomar decisões:</p>
-                <pre><code>int a = 10;
-if (a > 0) {
-    printf("a é positivo\n");
-} else if (a < 0) {
-    printf("a é negativo\n");
-} else {
-    printf("a é zero\n");
-}</code></pre>
-            </section>
-
-            <section>
-                <h2>5. Laços de repetição</h2>
-                <p>Use <code>for</code>, <code>while</code> e <code>do...while</code> para repetir ações:</p>
-                <pre><code>for (int i = 0; i < 5; i++) {
-    printf("i = %d\n", i);
-}
-
-int j = 0;
-while (j < 5) {
-    printf("j = %d\n", j);
-    j++;
-}</code></pre>
-                <p>Quer ver mais exemplos e explicações apenas sobre repetições? <a href="lop.html">Acesse a segunda tela</a>.</p>
             </section>
 
             <div class="note">

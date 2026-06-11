@@ -38,6 +38,22 @@ header p {
     background: #16a34a;
 }
 
+.estrutura-header {
+    background: #9333ea;
+}
+
+.variaveis-header {
+    background: #0891b2;
+}
+
+.entrada-header {
+    background: #ea580c;
+}
+
+.condicional-header {
+    background: #dc2626;
+}
+
 .navbar {
     display: flex;
     gap: 12px;

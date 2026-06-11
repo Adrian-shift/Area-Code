@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Programação em C - Entrada e Saída</title>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body>
+        <div class="container">
+            <header class="entrada-header">
+                <h1>Entrada e Saída em C</h1>
+                <p>Aprenda como interagir com o usuário através da entrada e saída de dados.</p>
+            </header>
+            <nav class="navbar">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="estrutura.html" class="nav-link">Estrutura</a>
+                <a href="variaveis.html" class="nav-link">Variáveis</a>
+                <a href="entradasaida.html" class="nav-link active">Entrada/Saída</a>
+                <a href="condicionais.html" class="nav-link">Condicionais</a>
+                <a href="lop.html" class="nav-link">Laços</a>
+            </nav>
+
+            <section>
+                <h2>Entrada e saída com <code>printf</code> e <code>scanf</code></h2>
+                <p>Use <code>printf</code> para mostrar dados e <code>scanf</code> para ler dados do usuário:</p>
+                <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int numero;
+    printf("Digite um número: ");
+    scanf("%d", &numero);
+    printf("Você digitou: %d\n", numero);
+    return 0;
+}</code></pre>
+                <p>Observação: <code>scanf</code> usa &amp; antes da variável para passar o endereço.</p>
+            </section>
+
+            <div class="note">
+                <strong>Dica:</strong> Sempre use formatadores corretos em <code>printf</code> e <code>scanf</code>: <code>%d</code> para inteiros, <code>%f</code> para floats, <code>%s</code> para strings.
+            </div>
+        </div>
+    </body>
+</html>
