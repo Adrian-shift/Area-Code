@@ -33,6 +33,29 @@
                 margin: 0;
                 opacity: 0.95;
             }
+            .navbar {
+                display: flex;
+                gap: 12px;
+                margin: 24px 0 0;
+                padding: 14px 16px;
+                border-radius: 16px;
+                background: #ffffff;
+                box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+            }
+            .nav-link {
+                display: inline-block;
+                color: #2f80ed;
+                text-decoration: none;
+                font-weight: 700;
+                padding: 8px 14px;
+                border-radius: 12px;
+                transition: background 0.2s ease, color 0.2s ease;
+            }
+            .nav-link:hover,
+            .nav-link.active {
+                background: #2f80ed;
+                color: white;
+            }
             section {
                 background: white;
                 border-radius: 16px;
@@ -73,6 +96,10 @@
                 <h1>Programação em C - Introdução</h1>
                 <p>Uma página simples para aprender os conceitos básicos da linguagem C.</p>
             </header>
+            <nav class="navbar">
+                <a href="index.html" class="nav-link active">Início</a>
+                <a href="lop.html" class="nav-link">Laços</a>
+            </nav>
 
             <section>
                 <h2>1. Estrutura de um programa em C</h2>
