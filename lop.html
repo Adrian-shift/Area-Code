@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Programação em C - Laços de Repetição</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                background: #f4f7fb;
+                color: #222;
+            }
+            .container {
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 24px 16px 48px;
+            }
+            header {
+                background: #16a34a;
+                color: white;
+                padding: 32px 16px;
+                border-radius: 0 0 16px 16px;
+                box-shadow: 0 8px 20px rgba(22, 163, 74, 0.18);
+            }
+            header h1 {
+                margin: 0 0 8px;
+                font-size: 2rem;
+            }
+            header p {
+                margin: 0;
+                opacity: 0.95;
+            }
+            section {
+                background: white;
+                border-radius: 16px;
+                margin: 24px 0;
+                padding: 24px;
+                box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+            }
+            h2 {
+                color: #0f172a;
+                margin-top: 0;
+            }
+            pre {
+                background: #f1f5f9;
+                padding: 16px;
+                border-radius: 12px;
+                overflow-x: auto;
+                border: 1px solid #e2e8f0;
+            }
+            code {
+                font-family: 'Courier New', monospace;
+            }
+            ul {
+                margin: 0;
+                padding-left: 20px;
+            }
+            .link-button {
+                display: inline-block;
+                margin-top: 16px;
+                padding: 12px 20px;
+                background: #2f80ed;
+                color: white;
+                text-decoration: none;
+                border-radius: 12px;
+                transition: background 0.2s ease;
+            }
+            .link-button:hover {
+                background: #1d60c7;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Laços de Repetição em C</h1>
+                <p>Mais tutoriais focados apenas em estruturas de repetição.</p>
+            </header>
+
+            <section>
+                <h2>1. `for`</h2>
+                <p>O `for` é ideal quando você sabe quantas vezes o laço deve rodar.</p>
+                <pre><code>for (int i = 0; i < 5; i++) {
+    printf("i = %d\n", i);
+}</code></pre>
+                <p>O loop começa em <code>i = 0</code>, verifica a condição <code>i &lt; 5</code> e incrementa <code>i</code> após cada iteração.</p>
+            </section>
+
+            <section>
+                <h2>2. `while`</h2>
+                <p>Use o <code>while</code> quando a condição precisa ser verificada antes de cada repetição.</p>
+                <pre><code>int contador = 0;
+while (contador < 5) {
+    printf("contador = %d\n", contador);
+    contador++;
+}</code></pre>
+                <p>Se a condição começar falsa, o corpo do laço não será executado nenhuma vez.</p>
+            </section>
+
+            <section>
+                <h2>3. `do...while`</h2>
+                <p>O <code>do...while</code> garante pelo menos uma execução antes da verificação da condição.</p>
+                <pre><code>int numero = 0;
+do {
+    printf("Digite 1 para sair: ");
+    scanf("%d", &numero);
+} while (numero != 1);</code></pre>
+                <p>Esse laço repete até que o usuário digite <code>1</code>.</p>
+            </section>
+
+            <section>
+                <h2>4. Laços aninhados</h2>
+                <p>Você pode colocar um laço dentro de outro. Isso é útil para matrizes e tabelas.</p>
+                <pre><code>for (int linha = 1; linha <= 3; linha++) {
+    for (int coluna = 1; coluna <= 4; coluna++) {
+        printf("(%d,%d) ", linha, coluna);
+    }
+    printf("\n");
+}</code></pre>
+                <p>Resultado:</p>
+                <pre><code>(1,1) (1,2) (1,3) (1,4)
+(2,1) (2,2) (2,3) (2,4)
+(3,1) (3,2) (3,3) (3,4)</code></pre>
+            </section>
+
+            <section>
+                <h2>5. `break` e `continue`</h2>
+                <p>Use <code>break</code> para sair imediatamente do laço e <code>continue</code> para pular a iteração atual.</p>
+                <pre><code>for (int i = 0; i < 10; i++) {
+    if (i == 5) {
+        break; // sai do laço
+    }
+    if (i % 2 == 0) {
+        continue; // pula números pares
+    }
+    printf("i ímpar = %d\n", i);
+}</code></pre>
+                <p>Esse exemplo imprime apenas os números ímpares até que <code>i</code> chegue a 5.</p>
+            </section>
+
+            <section>
+                <h2>6. Exemplo prático: soma de 1 a 10</h2>
+                <pre><code>int soma = 0;
+for (int i = 1; i <= 10; i++) {
+    soma += i;
+}
+printf("Soma = %d\n", soma);</code></pre>
+                <p>O laço acumula cada valor de 1 a 10 dentro da variável <code>soma</code>.</p>
+            </section>
+
+            <a href="index.html" class="link-button">Voltar para a página principal</a>
+        </div>
+    </body>
+</html>
