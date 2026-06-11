@@ -1,10 +1,157 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
     <head>
         <meta charset="utf-8">
-        <title>Site</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Programação em C - Básico</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                background: #f4f7fb;
+                color: #222;
+            }
+            .container {
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 24px 16px 48px;
+            }
+            header {
+                background: #2f80ed;
+                color: white;
+                padding: 32px 16px;
+                border-radius: 0 0 16px 16px;
+                box-shadow: 0 8px 20px rgba(47, 128, 237, 0.18);
+            }
+            header h1 {
+                margin: 0 0 8px;
+                font-size: 2rem;
+            }
+            header p {
+                margin: 0;
+                opacity: 0.95;
+            }
+            section {
+                background: white;
+                border-radius: 16px;
+                margin: 24px 0;
+                padding: 24px;
+                box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+            }
+            h2 {
+                color: #0f172a;
+                margin-top: 0;
+            }
+            pre {
+                background: #f1f5f9;
+                padding: 16px;
+                border-radius: 12px;
+                overflow-x: auto;
+                border: 1px solid #e2e8f0;
+            }
+            code {
+                font-family: 'Courier New', monospace;
+            }
+            ul {
+                margin: 0;
+                padding-left: 20px;
+            }
+            .note {
+                background: #fffbeb;
+                border-left: 4px solid #f59e0b;
+                padding: 12px 16px;
+                margin: 16px 0 0;
+                border-radius: 8px;
+            }
+        </style>
     </head>
     <body>
-        <h1>Site</h1>
+        <div class="container">
+            <header>
+                <h1>Programação em C - Introdução</h1>
+                <p>Uma página simples para aprender os conceitos básicos da linguagem C.</p>
+            </header>
+
+            <section>
+                <h2>1. Estrutura de um programa em C</h2>
+                <p>Um programa C básico usa a função <code>main()</code> como ponto de entrada. O código abaixo exibe uma mensagem no console:</p>
+                <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    printf("Olá, C!\n");
+    return 0;
+}</code></pre>
+                <p>Explicação:</p>
+                <ul>
+                    <li><code>#include &lt;stdio.h&gt;</code> traz a biblioteca padrão de entrada e saída.</li>
+                    <li><code>int main(void)</code> declara a função principal.</li>
+                    <li><code>printf</code> imprime texto na tela.</li>
+                    <li><code>return 0;</code> indica que o programa terminou com sucesso.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>2. Variáveis e tipos básicos</h2>
+                <p>As variáveis armazenam valores. Os tipos mais comuns são:</p>
+                <ul>
+                    <li><code>int</code> - números inteiros</li>
+                    <li><code>float</code> - números de ponto flutuante</li>
+                    <li><code>double</code> - números de ponto flutuante mais precisos</li>
+                    <li><code>char</code> - um único caractere</li>
+                </ul>
+                <pre><code>int idade = 20;
+float altura = 1.75f;
+double peso = 68.5;
+char letra = 'A';</code></pre>
+            </section>
+
+            <section>
+                <h2>3. Entrada e saída</h2>
+                <p>Use <code>printf</code> para mostrar dados e <code>scanf</code> para ler dados do usuário:</p>
+                <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int numero;
+    printf("Digite um número: ");
+    scanf("%d", &numero);
+    printf("Você digitou: %d\n", numero);
+    return 0;
+}</code></pre>
+                <p>Observação: <code>scanf</code> usa &amp; antes da variável para passar o endereço.</p>
+            </section>
+
+            <section>
+                <h2>4. Condicionais</h2>
+                <p>O <code>if</code> permite tomar decisões:</p>
+                <pre><code>int a = 10;
+if (a > 0) {
+    printf("a é positivo\n");
+} else if (a < 0) {
+    printf("a é negativo\n");
+} else {
+    printf("a é zero\n");
+}</code></pre>
+            </section>
+
+            <section>
+                <h2>5. Laços de repetição</h2>
+                <p>Use <code>for</code>, <code>while</code> e <code>do...while</code> para repetir ações:</p>
+                <pre><code>for (int i = 0; i < 5; i++) {
+    printf("i = %d\n", i);
+}
+
+int j = 0;
+while (j < 5) {
+    printf("j = %d\n", j);
+    j++;
+}</code></pre>
+            </section>
+
+            <div class="note">
+                <strong>Dica:</strong> pratique escrevendo e compilando pequenos programas. A linguagem C ajuda a entender como o computador organiza memória e processos.
+            </div>
+        </div>
     </body>
 </html>
