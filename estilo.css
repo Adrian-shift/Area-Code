@@ -83,6 +83,21 @@ header p {
     color: white;
 }
 
+.hero-image {
+    margin: 24px 0;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: clamp(220px, 42vw, 380px);
+    object-fit: cover;
+}
+
 section {
     background: white;
     border-radius: 16px;
@@ -201,6 +216,15 @@ tr:last-child td {
         padding: 16px;
     }
 
+    .hero-image {
+        margin: 18px 0;
+        border-radius: 14px;
+    }
+
+    .hero-image img {
+        height: clamp(180px, 55vw, 300px);
+    }
+
     h2 {
         font-size: 1.25rem;
     }
@@ -257,6 +281,15 @@ tr:last-child td {
     section {
         padding: 14px;
         margin: 16px 0;
+    }
+
+    .hero-image {
+        margin: 16px 0;
+        border-radius: 12px;
+    }
+
+    .hero-image img {
+        height: 210px;
     }
 
     h2 {
