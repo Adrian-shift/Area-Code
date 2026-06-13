@@ -22,25 +22,95 @@
             </nav>
 
             <section>
-                <h2>Um programa C básico usa a função <code>main()</code> como ponto de entrada</h2>
-                <p>O código abaixo exibe uma mensagem no console:</p>
+                <h2>Um programa C básico usa a função <code>main()</code></h2>
+                <p>A função <code>main</code> é o ponto de entrada do programa. Quando o executável inicia, é por ela que a execução começa.</p>
                 <pre><code>#include &lt;stdio.h&gt;
 
 int main(void) {
-    printf("Olá, C!\n");
+    printf("Ola, C!\n");
     return 0;
 }</code></pre>
-                <p>Explicação:</p>
                 <ul>
                     <li><code>#include &lt;stdio.h&gt;</code> traz a biblioteca padrão de entrada e saída.</li>
                     <li><code>int main(void)</code> declara a função principal.</li>
+                    <li><code>{ }</code> delimitam o bloco de comandos da função.</li>
                     <li><code>printf</code> imprime texto na tela.</li>
                     <li><code>return 0;</code> indica que o programa terminou com sucesso.</li>
                 </ul>
             </section>
 
+            <section>
+                <h2>Partes importantes do código</h2>
+                <p>Em C, cada detalhe da sintaxe importa. Ponto e vírgula, chaves e parênteses ajudam o compilador a entender o que deve ser executado.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Elemento</th>
+                            <th>Função</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>#include</code></td>
+                            <td>Inclui bibliotecas com funções prontas.</td>
+                        </tr>
+                        <tr>
+                            <td><code>main</code></td>
+                            <td>Função principal do programa.</td>
+                        </tr>
+                        <tr>
+                            <td><code>;</code></td>
+                            <td>Finaliza uma instrução.</td>
+                        </tr>
+                        <tr>
+                            <td><code>//</code></td>
+                            <td>Cria um comentário de uma linha.</td>
+                        </tr>
+                        <tr>
+                            <td><code>/* */</code></td>
+                            <td>Cria um comentário de várias linhas.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2>Comentários e organização</h2>
+                <p>Comentários servem para explicar decisões do código. Eles são ignorados pelo compilador, mas ajudam outras pessoas a entenderem o programa.</p>
+                <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    // Mostra uma mensagem inicial
+    printf("Bem-vindo ao curso de C!\n");
+
+    /*
+       Este comentário pode ocupar
+       mais de uma linha.
+    */
+    return 0;
+}</code></pre>
+            </section>
+
+            <section>
+                <h2>Como compilar</h2>
+                <p>Se você estiver usando o compilador GCC, salve o arquivo como <code>programa.c</code> e compile pelo terminal:</p>
+                <pre><code>gcc programa.c -o programa
+./programa</code></pre>
+                <p>No Windows, o executável pode ser iniciado com:</p>
+                <pre><code>programa.exe</code></pre>
+            </section>
+
+            <section class="exercise">
+                <h2>Exercícios rápidos</h2>
+                <ol>
+                    <li>Crie um programa que mostre seu nome na tela.</li>
+                    <li>Adicione dois <code>printf</code>: um para o nome e outro para a cidade.</li>
+                    <li>Coloque um comentário explicando o objetivo do programa.</li>
+                </ol>
+            </section>
+
             <div class="note">
-                <strong>Dica:</strong> Todo programa em C deve ter uma função <code>main()</code> que é executada quando o programa inicia.
+                <strong>Dica:</strong> todo programa em C deve ter uma função <code>main()</code> que é executada quando o programa inicia.
             </div>
         </div>
     </body>

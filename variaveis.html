@@ -22,22 +22,91 @@
             </nav>
 
             <section>
-                <h2>Tipos básicos de dados</h2>
-                <p>As variáveis armazenam valores. Os tipos mais comuns são:</p>
-                <ul>
-                    <li><code>int</code> - números inteiros</li>
-                    <li><code>float</code> - números de ponto flutuante</li>
-                    <li><code>double</code> - números de ponto flutuante mais precisos</li>
-                    <li><code>char</code> - um único caractere</li>
-                </ul>
+                <h2>O que é uma variável?</h2>
+                <p>Uma variável é um espaço na memória usado para guardar um valor. Em C, você precisa informar o tipo da variável antes de usá-la.</p>
                 <pre><code>int idade = 20;
 float altura = 1.75f;
 double peso = 68.5;
 char letra = 'A';</code></pre>
             </section>
 
+            <section>
+                <h2>Tipos básicos de dados</h2>
+                <p>Os tipos definem que tipo de valor pode ser armazenado e quanto espaço será usado na memória.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Uso comum</th>
+                            <th>Exemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>int</code></td>
+                            <td>Números inteiros</td>
+                            <td><code>int pontos = 10;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>float</code></td>
+                            <td>Números decimais simples</td>
+                            <td><code>float media = 8.5f;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>double</code></td>
+                            <td>Números decimais mais precisos</td>
+                            <td><code>double salario = 2500.75;</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>char</code></td>
+                            <td>Um caractere</td>
+                            <td><code>char opcao = 'S';</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2>Declaração, atribuição e atualização</h2>
+                <p>Declarar é criar a variável. Atribuir é colocar um valor nela. Atualizar é trocar o valor durante o programa.</p>
+                <pre><code>int contador;      // declaração
+contador = 1;      // atribuição
+contador = 2;      // atualização
+
+printf("Contador: %d\n", contador);</code></pre>
+            </section>
+
+            <section>
+                <h2>Constantes</h2>
+                <p>Use <code>const</code> quando um valor não deve mudar depois de definido. Isso torna o código mais claro e evita alterações acidentais.</p>
+                <pre><code>const double PI = 3.14159;
+double raio = 2.0;
+double area = PI * raio * raio;
+
+printf("Area: %.2f\n", area);</code></pre>
+            </section>
+
+            <section>
+                <h2>Nomes de variáveis</h2>
+                <p>Escolha nomes claros, sem espaços e sem começar por número. A linguagem C diferencia letras maiúsculas de minúsculas.</p>
+                <ul>
+                    <li><code>idade</code> e <code>Idade</code> são nomes diferentes.</li>
+                    <li><code>nota_final</code> é melhor que <code>nf</code> para iniciantes.</li>
+                    <li><code>2valor</code> é inválido porque começa com número.</li>
+                </ul>
+            </section>
+
+            <section class="exercise">
+                <h2>Exercícios rápidos</h2>
+                <ol>
+                    <li>Crie variáveis para nome, idade e altura.</li>
+                    <li>Calcule a média de três notas usando <code>float</code>.</li>
+                    <li>Crie uma constante para o valor de uma passagem de ônibus.</li>
+                </ol>
+            </section>
+
             <div class="note">
-                <strong>Dica:</strong> Escolha o tipo de dado apropriado para cada situação. Isso garante melhor uso de memória e evita erros.
+                <strong>Dica:</strong> escolha o tipo de dado apropriado para cada situação. Isso melhora o uso de memória e evita erros.
             </div>
         </div>
     </body>

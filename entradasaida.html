@@ -22,22 +22,105 @@
             </nav>
 
             <section>
-                <h2>Entrada e saída com <code>printf</code> e <code>scanf</code></h2>
-                <p>Use <code>printf</code> para mostrar dados e <code>scanf</code> para ler dados do usuário:</p>
+                <h2>Saída com <code>printf</code></h2>
+                <p>Use <code>printf</code> para mostrar mensagens e valores no terminal. Os formatadores indicam onde os valores aparecem.</p>
+                <pre><code>int idade = 18;
+float media = 7.5f;
+
+printf("Idade: %d\n", idade);
+printf("Media: %.1f\n", media);</code></pre>
+            </section>
+
+            <section>
+                <h2>Entrada com <code>scanf</code></h2>
+                <p>Use <code>scanf</code> para ler dados digitados pelo usuário. Na maioria dos tipos, coloque <code>&</code> antes da variável para passar seu endereço de memória.</p>
                 <pre><code>#include &lt;stdio.h&gt;
 
 int main(void) {
     int numero;
-    printf("Digite um número: ");
+
+    printf("Digite um numero: ");
     scanf("%d", &numero);
-    printf("Você digitou: %d\n", numero);
+
+    printf("Voce digitou: %d\n", numero);
     return 0;
 }</code></pre>
-                <p>Observação: <code>scanf</code> usa &amp; antes da variável para passar o endereço.</p>
+            </section>
+
+            <section>
+                <h2>Formatadores comuns</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Formatador</th>
+                            <th>Tipo</th>
+                            <th>Exemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>%d</code></td>
+                            <td><code>int</code></td>
+                            <td><code>scanf("%d", &idade);</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>%f</code></td>
+                            <td><code>float</code></td>
+                            <td><code>scanf("%f", &altura);</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>%lf</code></td>
+                            <td><code>double</code> no <code>scanf</code></td>
+                            <td><code>scanf("%lf", &peso);</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>%c</code></td>
+                            <td><code>char</code></td>
+                            <td><code>scanf(" %c", &opcao);</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>%s</code></td>
+                            <td>Texto sem espaços</td>
+                            <td><code>scanf("%s", nome);</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2>Lendo mais de um valor</h2>
+                <p>Você pode ler vários valores no mesmo <code>scanf</code>, desde que use os formatadores corretos e passe as variáveis na mesma ordem.</p>
+                <pre><code>int horas;
+float valor_hora;
+
+printf("Digite horas trabalhadas e valor por hora: ");
+scanf("%d %f", &horas, &valor_hora);
+
+printf("Total: R$ %.2f\n", horas * valor_hora);</code></pre>
+            </section>
+
+            <section>
+                <h2>Cuidado ao ler caracteres</h2>
+                <p>Ao ler um <code>char</code>, coloque um espaço antes de <code>%c</code>. Esse espaço faz o <code>scanf</code> ignorar quebras de linha deixadas por leituras anteriores.</p>
+                <pre><code>char resposta;
+
+printf("Deseja continuar? ");
+scanf(" %c", &resposta);
+
+printf("Resposta: %c\n", resposta);</code></pre>
+            </section>
+
+            <section class="exercise">
+                <h2>Exercícios rápidos</h2>
+                <ol>
+                    <li>Leia dois números inteiros e mostre a soma.</li>
+                    <li>Leia o nome e a idade de uma pessoa e mostre uma frase com esses dados.</li>
+                    <li>Leia o preço de um produto e mostre o valor com desconto de 10%.</li>
+                </ol>
             </section>
 
             <div class="note">
-                <strong>Dica:</strong> Sempre use formatadores corretos em <code>printf</code> e <code>scanf</code>: <code>%d</code> para inteiros, <code>%f</code> para floats, <code>%s</code> para strings.
+                <strong>Dica:</strong> use formatadores corretos em <code>printf</code> e <code>scanf</code>: <code>%d</code> para inteiros, <code>%f</code> para floats e <code>%s</code> para textos sem espaços.
             </div>
         </div>
     </body>

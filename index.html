@@ -23,14 +23,43 @@
 
             <section>
                 <h2>Bem-vindo ao tutorial de C</h2>
-                <p>Este material foi organizado em tópicos dedicados para facilitar seu aprendizado. Clique nos links da navegação acima para explorar cada tema:</p>
+                <p>Este material foi organizado em tópicos dedicados para facilitar seu aprendizado. A linguagem C é uma ótima porta de entrada para entender lógica, variáveis, memória, compilação e construção de programas mais próximos do funcionamento real do computador.</p>
                 <ul>
-                    <li><strong><a href="estrutura.html">Estrutura</a></strong> - Entenda como os programas em C são organizados</li>
-                    <li><strong><a href="variaveis.html">Variáveis</a></strong> - Conheça os tipos de dados e como armazenar informações</li>
-                    <li><strong><a href="entradasaida.html">Entrada e Saída</a></strong> - Aprenda a interagir com o usuário</li>
-                    <li><strong><a href="condicionais.html">Condicionais</a></strong> - Controle o fluxo de seus programas</li>
-                    <li><strong><a href="lop.html">Laços</a></strong> - Domine as estruturas de repetição</li>
+                    <li><strong><a href="estrutura.html">Estrutura</a></strong> - Entenda como os programas em C são organizados.</li>
+                    <li><strong><a href="variaveis.html">Variáveis</a></strong> - Conheça os tipos de dados e como armazenar informações.</li>
+                    <li><strong><a href="entradasaida.html">Entrada e Saída</a></strong> - Aprenda a interagir com o usuário.</li>
+                    <li><strong><a href="condicionais.html">Condicionais</a></strong> - Controle o fluxo de seus programas.</li>
+                    <li><strong><a href="lop.html">Laços</a></strong> - Domine as estruturas de repetição.</li>
                 </ul>
+            </section>
+
+            <section>
+                <h2>Como estudar este conteúdo</h2>
+                <p>Uma boa forma de aprender C é seguir uma sequência simples: leia o conceito, copie o exemplo, compile, execute e depois altere pequenos detalhes para observar o resultado.</p>
+                <ol>
+                    <li>Comece pela estrutura básica de um programa.</li>
+                    <li>Aprenda a declarar variáveis e escolher tipos de dados.</li>
+                    <li>Use <code>printf</code> e <code>scanf</code> para entrada e saída.</li>
+                    <li>Crie decisões com <code>if</code>, <code>else</code> e <code>switch</code>.</li>
+                    <li>Automatize repetições com <code>for</code>, <code>while</code> e <code>do...while</code>.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Primeiro programa completo</h2>
+                <p>Este exemplo reúne os primeiros conceitos: biblioteca, função principal, variável, entrada, saída e retorno do programa.</p>
+                <pre><code>#include &lt;stdio.h&gt;
+
+int main(void) {
+    int idade;
+
+    printf("Digite sua idade: ");
+    scanf("%d", &idade);
+
+    printf("Voce tem %d anos.\n", idade);
+
+    return 0;
+}</code></pre>
             </section>
 
             <div class="note">

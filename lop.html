@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
     <head>
         <meta charset="utf-8">
@@ -10,7 +10,7 @@
         <div class="container">
             <header class="loops-header">
                 <h1>Laços de Repetição em C</h1>
-                <p>Mais tutoriais focados apenas em estruturas de repetição.</p>
+                <p>Aprenda a repetir comandos de forma controlada.</p>
             </header>
             <nav class="navbar">
                 <a href="index.html" class="nav-link">Início</a>
@@ -22,18 +22,34 @@
             </nav>
 
             <section>
-                <h2>1. `for`</h2>
-                <p>O `for` é ideal quando você sabe quantas vezes o laço deve rodar.</p>
-                <pre><code>for (int i = 0; i < 5; i++) {
-    printf("i = %d\n", i);
+                <h2>Quando usar laços?</h2>
+                <p>Laços de repetição servem para executar o mesmo bloco de código várias vezes. Eles evitam repetição manual e deixam o programa mais flexível.</p>
+                <pre><code>printf("1\n");
+printf("2\n");
+printf("3\n");</code></pre>
+                <p>Com um laço, o mesmo resultado pode ser produzido de forma mais inteligente:</p>
+                <pre><code>for (int i = 1; i <= 3; i++) {
+    printf("%d\n", i);
 }</code></pre>
-                <p>O loop começa em <code>i = 0</code>, verifica a condição <code>i &lt; 5</code> e incrementa <code>i</code> após cada iteração.</p>
             </section>
 
             <section>
-                <h2>2. `while`</h2>
+                <h2>1. <code>for</code></h2>
+                <p>O <code>for</code> é ideal quando você sabe quantas vezes o laço deve rodar.</p>
+                <pre><code>for (int i = 0; i < 5; i++) {
+    printf("i = %d\n", i);
+}</code></pre>
+                <p>Ele possui três partes: inicialização, condição e atualização.</p>
+                <pre><code>for (inicializacao; condicao; atualizacao) {
+    // comandos repetidos
+}</code></pre>
+            </section>
+
+            <section>
+                <h2>2. <code>while</code></h2>
                 <p>Use o <code>while</code> quando a condição precisa ser verificada antes de cada repetição.</p>
                 <pre><code>int contador = 0;
+
 while (contador < 5) {
     printf("contador = %d\n", contador);
     contador++;
@@ -42,9 +58,10 @@ while (contador < 5) {
             </section>
 
             <section>
-                <h2>3. `do...while`</h2>
+                <h2>3. <code>do...while</code></h2>
                 <p>O <code>do...while</code> garante pelo menos uma execução antes da verificação da condição.</p>
                 <pre><code>int numero = 0;
+
 do {
     printf("Digite 1 para sair: ");
     scanf("%d", &numero);
@@ -53,8 +70,34 @@ do {
             </section>
 
             <section>
+                <h2>Comparando os laços</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Laço</th>
+                            <th>Melhor uso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>for</code></td>
+                            <td>Quando a quantidade de repetições é conhecida.</td>
+                        </tr>
+                        <tr>
+                            <td><code>while</code></td>
+                            <td>Quando depende de uma condição que pode mudar.</td>
+                        </tr>
+                        <tr>
+                            <td><code>do...while</code></td>
+                            <td>Quando o bloco precisa rodar pelo menos uma vez.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
                 <h2>4. Laços aninhados</h2>
-                <p>Você pode colocar um laço dentro de outro. Isso é útil para matrizes e tabelas.</p>
+                <p>Você pode colocar um laço dentro de outro. Isso é útil para matrizes, tabelas e desenhos no terminal.</p>
                 <pre><code>for (int linha = 1; linha <= 3; linha++) {
     for (int coluna = 1; coluna <= 4; coluna++) {
         printf("(%d,%d) ", linha, coluna);
@@ -68,16 +111,18 @@ do {
             </section>
 
             <section>
-                <h2>5. `break` e `continue`</h2>
+                <h2>5. <code>break</code> e <code>continue</code></h2>
                 <p>Use <code>break</code> para sair imediatamente do laço e <code>continue</code> para pular a iteração atual.</p>
                 <pre><code>for (int i = 0; i < 10; i++) {
     if (i == 5) {
-        break; // sai do laço
+        break;
     }
+
     if (i % 2 == 0) {
-        continue; // pula números pares
+        continue;
     }
-    printf("i ímpar = %d\n", i);
+
+    printf("i impar = %d\n", i);
 }</code></pre>
                 <p>Esse exemplo imprime apenas os números ímpares até que <code>i</code> chegue a 5.</p>
             </section>
@@ -85,12 +130,37 @@ do {
             <section>
                 <h2>6. Exemplo prático: soma de 1 a 10</h2>
                 <pre><code>int soma = 0;
+
 for (int i = 1; i <= 10; i++) {
     soma += i;
 }
+
 printf("Soma = %d\n", soma);</code></pre>
                 <p>O laço acumula cada valor de 1 a 10 dentro da variável <code>soma</code>.</p>
             </section>
+
+            <section>
+                <h2>7. Exemplo prático: tabuada</h2>
+                <pre><code>int numero = 7;
+
+for (int i = 1; i <= 10; i++) {
+    printf("%d x %d = %d\n", numero, i, numero * i);
+}</code></pre>
+            </section>
+
+            <section class="exercise">
+                <h2>Exercícios rápidos</h2>
+                <ol>
+                    <li>Mostre os números de 1 a 100 usando <code>for</code>.</li>
+                    <li>Leia números até o usuário digitar 0 e mostre a soma total.</li>
+                    <li>Faça uma tabuada usando o número digitado pelo usuário.</li>
+                    <li>Use laços aninhados para imprimir um retângulo de asteriscos.</li>
+                </ol>
+            </section>
+
+            <div class="note">
+                <strong>Dica:</strong> verifique se a variável de controle muda dentro do laço. Caso contrário, o programa pode entrar em loop infinito.
+            </div>
         </div>
     </body>
 </html>

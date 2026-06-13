@@ -22,20 +22,135 @@
             </nav>
 
             <section>
-                <h2>O <code>if</code> permite tomar decisões</h2>
-                <p>Use a estrutura <code>if...else if...else</code> para controlar o fluxo do programa:</p>
-                <pre><code>int a = 10;
-if (a > 0) {
-    printf("a é positivo\n");
-} else if (a < 0) {
-    printf("a é negativo\n");
-} else {
-    printf("a é zero\n");
+                <h2>Decisões com <code>if</code></h2>
+                <p>O <code>if</code> executa um bloco apenas quando a condição é verdadeira.</p>
+                <pre><code>int idade = 18;
+
+if (idade >= 18) {
+    printf("Maior de idade\n");
 }</code></pre>
             </section>
 
+            <section>
+                <h2><code>if</code>, <code>else if</code> e <code>else</code></h2>
+                <p>Use essa estrutura quando há mais de uma possibilidade de resposta.</p>
+                <pre><code>int a = 10;
+
+if (a > 0) {
+    printf("a e positivo\n");
+} else if (a < 0) {
+    printf("a e negativo\n");
+} else {
+    printf("a e zero\n");
+}</code></pre>
+            </section>
+
+            <section>
+                <h2>Operadores de comparação</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Operador</th>
+                            <th>Significado</th>
+                            <th>Exemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>==</code></td>
+                            <td>Igual a</td>
+                            <td><code>x == 10</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>!=</code></td>
+                            <td>Diferente de</td>
+                            <td><code>x != 0</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&gt;</code></td>
+                            <td>Maior que</td>
+                            <td><code>x &gt; 5</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;</code></td>
+                            <td>Menor que</td>
+                            <td><code>x &lt; 5</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&gt;=</code></td>
+                            <td>Maior ou igual</td>
+                            <td><code>x &gt;= 18</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;=</code></td>
+                            <td>Menor ou igual</td>
+                            <td><code>x &lt;= 100</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2>Operadores lógicos</h2>
+                <p>Operadores lógicos combinam condições para criar regras mais completas.</p>
+                <pre><code>int idade = 20;
+int tem_documento = 1;
+
+if (idade >= 18 && tem_documento == 1) {
+    printf("Entrada permitida\n");
+}</code></pre>
+                <ul>
+                    <li><code>&&</code> significa "e": as duas condições precisam ser verdadeiras.</li>
+                    <li><code>||</code> significa "ou": pelo menos uma condição precisa ser verdadeira.</li>
+                    <li><code>!</code> significa "não": inverte o resultado da condição.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Escolhas com <code>switch</code></h2>
+                <p>O <code>switch</code> é útil quando você compara uma variável com vários valores específicos.</p>
+                <pre><code>int opcao = 2;
+
+switch (opcao) {
+    case 1:
+        printf("Cadastrar\n");
+        break;
+    case 2:
+        printf("Listar\n");
+        break;
+    case 3:
+        printf("Sair\n");
+        break;
+    default:
+        printf("Opcao invalida\n");
+}</code></pre>
+                <p>O <code>break</code> impede que a execução continue para os próximos casos.</p>
+            </section>
+
+            <section>
+                <h2>Exemplo prático: aprovação</h2>
+                <pre><code>float media = 6.8f;
+
+if (media >= 7.0f) {
+    printf("Aprovado\n");
+} else if (media >= 5.0f) {
+    printf("Recuperacao\n");
+} else {
+    printf("Reprovado\n");
+}</code></pre>
+            </section>
+
+            <section class="exercise">
+                <h2>Exercícios rápidos</h2>
+                <ol>
+                    <li>Leia uma idade e informe se a pessoa pode votar.</li>
+                    <li>Leia um número e diga se ele é par ou ímpar.</li>
+                    <li>Crie um menu com <code>switch</code> para escolher entre somar, subtrair e sair.</li>
+                </ol>
+            </section>
+
             <div class="note">
-                <strong>Dica:</strong> Use operadores de comparação (<code>&lt;</code>, <code>&gt;</code>, <code>==</code>, <code>!=</code>) e operadores lógicos (<code>&&</code>, <code>||</code>, <code>!</code>) para criar condições complexas.
+                <strong>Dica:</strong> use <code>==</code> para comparar igualdade. O operador <code>=</code> é usado para atribuir valor.
             </div>
         </div>
     </body>
