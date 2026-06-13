@@ -23,7 +23,7 @@ Um site educativo em HTML e CSS que apresenta um tutorial introdutório de progr
 
 ## Como usar
 
-1. Abra o arquivo `index.html` no navegador.
+1. Acesse o link [Visite meu site](https://meusite.com) no navegador.
 2. Clique nos links de navegação para acessar os tópicos.
 3. Use a visualização no celular para testar o layout responsivo.
 
